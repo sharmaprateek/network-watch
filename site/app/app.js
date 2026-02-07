@@ -75,8 +75,27 @@ function route(){
   return h || 'overview';
 }
 
+function learnEnabled(){
+  return (localStorage.getItem('nw.learn.enabled') ?? '0') === '1';
+}
+
+function setLearnEnabled(v){
+  localStorage.setItem('nw.learn.enabled', v ? '1' : '0');
+}
+
 function setActiveNav(r){
   $$('.nav__item').forEach(b => b.classList.toggle('is-active', b.dataset.route === r));
+}
+
+function applyLearnVisibility(){
+  const on = learnEnabled();
+  const learnBtn = $(`.nav__item[data-route="learn"]`);
+  if(learnBtn) learnBtn.style.display = on ? '' : 'none';
+  // Hide any contextual learn buttons when off
+  $$('[data-learn]').forEach(el => {
+    el.style.display = on ? '' : 'none';
+  });
+  if(!on && route() === 'learn') location.hash = '#overview';
 }
 
 function filteredDevices(){
@@ -514,16 +533,35 @@ function renderInsights(){
 }
 
 function renderSettings(){
+  const learnOn = learnEnabled();
   $('#content').innerHTML = `
     <div class="card">
-      <div class="card__hd"><h2>Settings</h2><div class="card__sub">Edit names/types via JSON files</div></div>
+      <div class="card__hd"><h2>Settings</h2><div class="card__sub">Preferences + where to edit inventory</div></div>
       <div class="card__bd">
-        <div class="muted">On this host:</div>
-        <ul class="small">
-          <li><code>/home/prateek/.openclaw/workspace/network-watch/state/aliases.json</code> (MAC → friendly name)</li>
-          <li><code>/home/prateek/.openclaw/workspace/network-watch/state/overrides.json</code> (MAC → forced type/name)</li>
-          <li><code>/home/prateek/.openclaw/workspace/network-watch/state/alerts.json</code> (alert mode + rate limits)</li>
-        </ul>
+
+        <div class="section">
+          <div class="section__title">Learning</div>
+          <div class="kv">
+            <div class="k">Learn mode</div>
+            <div>
+              <label style="display:flex; gap:10px; align-items:center;">
+                <input type="checkbox" id="learnToggle" ${learnOn ? 'checked' : ''} />
+                <span class="muted">Show Learn navigation, “?” helpers, and guided onboarding.</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__title">Files</div>
+          <div class="muted">On this host:</div>
+          <ul class="small">
+            <li><code>/home/prateek/.openclaw/workspace/network-watch/state/aliases.json</code> (MAC → friendly name)</li>
+            <li><code>/home/prateek/.openclaw/workspace/network-watch/state/overrides.json</code> (MAC → forced type/name)</li>
+            <li><code>/home/prateek/.openclaw/workspace/network-watch/state/alerts.json</code> (alert mode + rate limits)</li>
+          </ul>
+        </div>
+
         <div class="section">
           <div class="section__title">Override snippet template</div>
           <pre class="snip"><code>{
@@ -538,6 +576,14 @@ function renderSettings(){
       </div>
     </div>
   `;
+
+  const t = $('#learnToggle');
+  if(t){
+    t.addEventListener('change', ()=>{
+      setLearnEnabled(t.checked);
+      applyLearnVisibility();
+    });
+  }
 }
 
 function render(){
@@ -775,6 +821,12 @@ async function load(){
   const sel = $('#filterType');
   sel.innerHTML = '<option value="">All types</option>' + Array.from(types).sort().map(t=>`<option value="${esc(t)}">${esc(t)}</option>`).join('');
 
+  // Default: Learn mode OFF (public)
+  if(localStorage.getItem('nw.learn.enabled') === null){
+    localStorage.setItem('nw.learn.enabled', '0');
+  }
+
+  applyLearnVisibility();
   render();
 }
 
