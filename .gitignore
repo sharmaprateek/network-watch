@@ -3,6 +3,11 @@
 /logs/
 /state/
 
+# generated site artifacts
+/site/latest.json
+/site/history.json
+/site/device_stats.json
+
 # python
 __pycache__/
 *.pyc
