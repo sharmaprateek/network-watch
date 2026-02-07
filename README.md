@@ -28,11 +28,12 @@ cp .env.example .env
 docker compose up --build
 ```
 
-Then open:
+Then open (default):
 
-- Dashboard: http://localhost:8787/
-- App (SPA): http://localhost:8787/app/
+- Dashboard: http://localhost:${NW_HTTP_PORT:-8787}/
+- App (SPA): http://localhost:${NW_HTTP_PORT:-8787}/app/
 
+Change the port by setting `NW_HTTP_PORT` in `.env`.
 ## How it works
 
 A scan loop runs periodically:

@@ -8,8 +8,8 @@ services:
       - .env
     environment:
       - NW_NO_SERVER=1
-    ports:
-      - "8787:8787"
+    # NOTE: using host networking; port publishing is ignored.
+    # Configure the listening port via NW_HTTP_PORT in .env
     volumes:
       - ./data:/app/data
       - ./logs:/app/logs

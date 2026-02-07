@@ -20,6 +20,17 @@ Edit:
 docker compose up --build
 ```
 
+### Changing the port
+
+With `network_mode: host`, Docker port publishing is ignored.
+
+To change the port, set in `.env`:
+
+```bash
+NW_HTTP_PORT=8787
+```
+
+Then restart the container.
 ### Why `network_mode: host`?
 
 For LAN discovery, ARP scanning and accurate host visibility usually require direct access to the host network stack.
