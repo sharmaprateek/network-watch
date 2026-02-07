@@ -3,6 +3,14 @@
 /logs/
 /state/
 
+# local config
+.env
+
+# node (screenshot tooling)
+node_modules/
+package-lock.json
+package.json
+
 # generated site artifacts
 /site/latest.json
 /site/history.json
