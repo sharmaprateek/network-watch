@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Network Watch</title>
+  <link rel="stylesheet" href="./app.css" />
+</head>
+<body>
+  <div id="app">
+    <div class="navBackdrop" id="navBackdrop"></div>
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand__title">Network Watch</div>
+        <div class="brand__sub" id="lastUpdated">Loading…</div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav__item is-active" data-route="overview">Overview</button>
+        <button class="nav__item" data-route="devices">Devices</button>
+        <button class="nav__item" data-route="timeline">Timeline</button>
+        <button class="nav__item" data-route="insights">Insights</button>
+        <button class="nav__item" data-route="settings">Settings</button>
+      </nav>
+
+      <div class="sidebar__footer">
+        <a href="/">Classic dashboard</a>
+        <a href="/fancy.html">Fancy (latest)</a>
+        <a href="/fancy-timeline.html">Fancy timeline</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="iconBtn" id="navToggle" aria-label="Open navigation" title="Menu">☰</button>
+        <div class="search">
+          <input id="search" placeholder="Search name / hostname / vendor / MAC / IP" />
+        </div>
+        <div class="filters">
+          <select id="filterType">
+            <option value="">All types</option>
+          </select>
+          <select id="filterRisk">
+            <option value="">All</option>
+            <option value="risky">Risky only</option>
+            <option value="unknown">Unknown only</option>
+          </select>
+        </div>
+      </header>
+
+      <section class="content" id="content"></section>
+    </main>
+  </div>
+
+  <div class="backdrop" id="backdrop"></div>
+  <aside class="drawer" id="drawer" aria-label="Device details">
+    <div class="drawer__hd">
+      <div class="drawer__title" id="drawerTitle">Device</div>
+      <div class="drawer__sub" id="drawerSub">—</div>
+      <div class="drawer__actions">
+        <button class="drawer__btn" id="drawerClose">Close</button>
+        <a class="drawer__btn" id="drawerClassic" href="/" target="_blank" rel="noreferrer">Classic view</a>
+      </div>
+    </div>
+    <div class="drawer__bd" id="drawerBody"></div>
+  </aside>
+
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+services:
+  network-watch:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: network-watch
+    env_file:
+      - .env
+    environment:
+      - NW_NO_SERVER=1
+    ports:
+      - "8787:8787"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./state:/app/state
+      - ./site:/app/site
+    # Needed for ARP scan + nmap accuracy on LAN
+    network_mode: host
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+    restart: unless-stopped

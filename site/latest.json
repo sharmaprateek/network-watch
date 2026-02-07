@@ -1,0 +1,1676 @@
+{
+  "timestamp_utc": "20260207T210005Z",
+  "timestamp_human": "2026-02-07 13:00:05 PST",
+  "host_ip": "192.168.235.175",
+  "subnet": "192.168.235.0/24",
+  "devices": [
+    {
+      "id": "20:6d:31:31:9a:40",
+      "type": "gateway",
+      "name": "Firewalla gateway",
+      "hostname": "firewalla.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.1",
+      "mac": "20:6d:31:31:9a:40",
+      "vendor": "FIREWALLA INC",
+      "open_ports": [
+        {
+          "port": "22/tcp",
+          "service": "ssh",
+          "version": "OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)",
+          "raw": "22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)"
+        },
+        {
+          "port": "53/tcp",
+          "service": "domain",
+          "version": "dnsmasq UNKNOWN",
+          "raw": "53/tcp open  domain  dnsmasq UNKNOWN"
+        }
+      ],
+      "web": [],
+      "risk_flags": [
+        "SSH exposed (22)"
+      ],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "00:11:32:38:2d:0d",
+      "type": "nas",
+      "name": "Synology NAS (JUPITER)",
+      "hostname": "jupiter.lan",
+      "mdns": [
+        "Jupiter.local"
+      ],
+      "mdns_services": [
+        "Apple File Sharing",
+        "Apple TimeMachine",
+        "Device Info",
+        "Microsoft Windows Network",
+        "iTunes Remote Control"
+      ],
+      "ssdp": [
+        {
+          "st": "urn:schemas-upnp-org:service:ContentDirectory:1",
+          "server": "Linux/3.10.108, UPnP/1.0, Portable SDK for UPnP devices/1.12.1",
+          "location": "http://192.168.235.2:50001/desc/device.xml",
+          "usn": "uuid:00113238-2d0d-0011-0d2d-0d2d38321100::urn:schemas-upnp-org:service:ContentDirectory:1"
+        },
+        {
+          "st": "upnp:rootdevice",
+          "server": "Linux/3.10.108, UPnP/1.0, Portable SDK for UPnP devices/1.12.1",
+          "location": "http://192.168.235.2:50001/desc/device.xml",
+          "usn": "uuid:00113238-2d0d-0011-0d2d-0d2d38321100::upnp:rootdevice"
+        },
+        {
+          "st": "urn:schemas-upnp-org:service:ConnectionManager:1",
+          "server": "Linux/3.10.108, UPnP/1.0, Portable SDK for UPnP devices/1.12.1",
+          "location": "http://192.168.235.2:50001/desc/device.xml",
+          "usn": "uuid:00113238-2d0d-0011-0d2d-0d2d38321100::urn:schemas-upnp-org:service:ConnectionManager:1"
+        },
+        {
+          "st": "uuid:00113238-2d0d-0011-0d2d-0d2d38321100",
+          "server": "Linux/3.10.108, UPnP/1.0, Portable SDK for UPnP devices/1.12.1",
+          "location": "http://192.168.235.2:50001/desc/device.xml",
+          "usn": "uuid:00113238-2d0d-0011-0d2d-0d2d38321100"
+        },
+        {
+          "st": "urn:schemas-upnp-org:device:MediaServer:1",
+          "server": "Linux/3.10.108, UPnP/1.0, Portable SDK for UPnP devices/1.12.1",
+          "location": "http://192.168.235.2:50001/desc/device.xml",
+          "usn": "uuid:00113238-2d0d-0011-0d2d-0d2d38321100::urn:schemas-upnp-org:device:MediaServer:1"
+        },
+        {
+          "st": "upnp:rootdevice",
+          "server": "Synology/DSM/192.168.235.2",
+          "location": "http://192.168.235.2:5000/ssdp/desc-DSM-eth0.xml",
+          "usn": "uuid:73796E6F-6473-6D00-0000-001132382d0d::upnp:rootdevice"
+        },
+        {
+          "st": "urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1",
+          "server": "Linux/3.10.108, UPnP/1.0, Portable SDK for UPnP devices/1.12.1",
+          "location": "http://192.168.235.2:50001/desc/device.xml",
+          "usn": "uuid:00113238-2d0d-0011-0d2d-0d2d38321100::urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1"
+        }
+      ],
+      "ip": "192.168.235.2",
+      "mac": "00:11:32:38:2d:0d",
+      "vendor": "Synology Incorporated",
+      "open_ports": [
+        {
+          "port": "53/tcp",
+          "service": "domain",
+          "version": "(generic dns response: NOTIMP)",
+          "raw": "53/tcp   open  domain      (generic dns response: NOTIMP)"
+        },
+        {
+          "port": "80/tcp",
+          "service": "http",
+          "version": "nginx",
+          "raw": "80/tcp   open  http        nginx"
+        },
+        {
+          "port": "111/tcp",
+          "service": "rpcbind",
+          "version": "",
+          "raw": "111/tcp  open  rpcbind"
+        },
+        {
+          "port": "139/tcp",
+          "service": "netbios-ssn",
+          "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+          "raw": "139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)"
+        },
+        {
+          "port": "443/tcp",
+          "service": "ssl/http",
+          "version": "nginx",
+          "raw": "443/tcp  open  ssl/http    nginx"
+        },
+        {
+          "port": "445/tcp",
+          "service": "netbios-ssn",
+          "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+          "raw": "445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)"
+        },
+        {
+          "port": "548/tcp",
+          "service": "afp",
+          "version": "Netatalk 3.1.12 (name: Jupiter; protocol 3.4)",
+          "raw": "548/tcp  open  afp         Netatalk 3.1.12 (name: Jupiter; protocol 3.4)"
+        },
+        {
+          "port": "2049/tcp",
+          "service": "rpcbind",
+          "version": "",
+          "raw": "2049/tcp open  rpcbind"
+        },
+        {
+          "port": "5000/tcp",
+          "service": "http",
+          "version": "nginx",
+          "raw": "5000/tcp open  http        nginx"
+        },
+        {
+          "port": "5357/tcp",
+          "service": "http",
+          "version": "nginx",
+          "raw": "5357/tcp open  http        nginx"
+        },
+        {
+          "port": "8080/tcp",
+          "service": "tcpwrapped",
+          "version": "",
+          "raw": "8080/tcp open  tcpwrapped"
+        }
+      ],
+      "web": [
+        {
+          "ip": "192.168.235.2",
+          "port": 80,
+          "url": "http://192.168.235.2:80/",
+          "status": 200,
+          "server": "nginx",
+          "x_powered_by": null,
+          "title": null,
+          "bytes": 543,
+          "robots_txt": "<!DOCTYPE html>\n<html>\n    <body>\n        <input type=\"hidden\" id=\"http\" name=\"http\" value=\"5000\">\n        <input type=\"hidden\" id=\"https\" name=\"https\" value=\"5001\">\n        <input type=\"hidden\" id=\"prefer_https\" name=\"prefer_https\" value=\"false\">\n    </body>\n    <script type=\"text/javascript\">\n        var protocol=location.protocol;\n        var port=location.protocol === \"https:\" ? 5001 : 5000;\n        var URL=protocol+\"//\"+location.hostname+\":\"+port+location.pathname+location.search;\n        location.replace(URL);\n    </script>\n</html>",
+          "security_txt": "<!DOCTYPE html>\n<html>\n    <body>\n        <input type=\"hidden\" id=\"http\" name=\"http\" value=\"5000\">\n        <input type=\"hidden\" id=\"https\" name=\"https\" value=\"5001\">\n        <input type=\"hidden\" id=\"prefer_https\" name=\"prefer_https\" value=\"false\">\n    </body>\n    <script type=\"text/javascript\">\n        var protocol=location.protocol;\n        var port=location.protocol === \"https:\" ? 5001 : 5000;\n        var URL=protocol+\"//\"+location.hostname+\":\"+port+location.pathname+location.search;\n        location.replace(URL);\n    </script>\n</html>",
+          "tls": null,
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0   543    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   543  100   543    0     0  47485      0 --:--:-- --:--:-- --:--:-- 49363",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   543  100   543    0     0  46705      0 --:--:-- --:--:-- --:--:-- 49363",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   543  100   543    0     0  46903      0 --:--:-- --:--:-- --:--:-- 49363"
+          }
+        },
+        {
+          "ip": "192.168.235.2",
+          "port": 443,
+          "url": "https://192.168.235.2:443/",
+          "status": 200,
+          "server": "nginx",
+          "x_powered_by": null,
+          "title": null,
+          "bytes": 543,
+          "robots_txt": "<!DOCTYPE html>\n<html>\n    <body>\n        <input type=\"hidden\" id=\"http\" name=\"http\" value=\"5000\">\n        <input type=\"hidden\" id=\"https\" name=\"https\" value=\"5001\">\n        <input type=\"hidden\" id=\"prefer_https\" name=\"prefer_https\" value=\"false\">\n    </body>\n    <script type=\"text/javascript\">\n        var protocol=location.protocol;\n        var port=location.protocol === \"https:\" ? 5001 : 5000;\n        var URL=protocol+\"//\"+location.hostname+\":\"+port+location.pathname+location.search;\n        location.replace(URL);\n    </script>\n</html>",
+          "security_txt": "<!DOCTYPE html>\n<html>\n    <body>\n        <input type=\"hidden\" id=\"http\" name=\"http\" value=\"5000\">\n        <input type=\"hidden\" id=\"https\" name=\"https\" value=\"5001\">\n        <input type=\"hidden\" id=\"prefer_https\" name=\"prefer_https\" value=\"false\">\n    </body>\n    <script type=\"text/javascript\">\n        var protocol=location.protocol;\n        var port=location.protocol === \"https:\" ? 5001 : 5000;\n        var URL=protocol+\"//\"+location.hostname+\":\"+port+location.pathname+location.search;\n        location.replace(URL);\n    </script>\n</html>",
+          "tls": {
+            "rc": 0,
+            "summary": "subject=CN = sharmaprateek.synology.me\nissuer=C = US, O = Let's Encrypt, CN = E7\nnotBefore=Dec 28 02:48:22 2025 GMT\nnotAfter=Mar 28 02:48:21 2026 GMT",
+            "err": ""
+          },
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0   543    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   543  100   543    0     0  28093      0 --:--:-- --:--:-- --:--:-- 28578",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   543  100   543    0     0  19701      0 --:--:-- --:--:-- --:--:-- 20111",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   543  100   543    0     0  28545      0 --:--:-- --:--:-- --:--:-- 28578"
+          }
+        },
+        {
+          "ip": "192.168.235.2",
+          "port": 5000,
+          "url": "http://192.168.235.2:5000/",
+          "status": 200,
+          "server": "nginx",
+          "x_powered_by": null,
+          "title": "Jupiter&nbsp;-&nbsp;Synology&nbsp;DiskStation",
+          "bytes": 12328,
+          "robots_txt": "User-agent: *\nDisallow: /\n",
+          "security_txt": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<style>body{font-family:Arial,Helvetica,sans-serif;font-size:12px;text-align:center}h1{color:#06C;font-size:25px;line-height:60px;margin-top:56px}img{margin-top:40px}\n</style>\n</head>\n<body>\n<img src=\"data:image/jpg;base64,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",
+          "tls": null,
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 12328    0 12328    0     0  61970      0 --:--:-- --:--:-- --:--:-- 62262",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100    26  100    26    0     0   2173      0 --:--:-- --:--:-- --:--:--  2363",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 11939  100 11939    0     0   689k      0 --:--:-- --:--:-- --:--:--  728k"
+          }
+        },
+        {
+          "ip": "192.168.235.2",
+          "port": 5357,
+          "url": "http://192.168.235.2:5357/",
+          "status": 502,
+          "server": "nginx",
+          "x_powered_by": null,
+          "title": "502 Bad Gateway",
+          "bytes": 143,
+          "robots_txt": "<html>\n<head><title>502 Bad Gateway</title></head>\n<body>\n<center><h1>502 Bad Gateway</h1></center>\n<hr><center>nginx</center>\n</body>\n</html>\n",
+          "security_txt": "<html>\n<head><title>502 Bad Gateway</title></head>\n<body>\n<center><h1>502 Bad Gateway</h1></center>\n<hr><center>nginx</center>\n</body>\n</html>\n",
+          "tls": null,
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0   150    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   150  100   150    0     0  10827      0 --:--:-- --:--:-- --:--:-- 11538",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   150  100   150    0     0  12423      0 --:--:-- --:--:-- --:--:-- 12500",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   150  100   150    0     0  11612      0 --:--:-- --:--:-- --:--:-- 12500"
+          }
+        },
+        {
+          "ip": "192.168.235.2",
+          "port": 8080,
+          "url": "http://192.168.235.2:8080/",
+          "status": null,
+          "server": null,
+          "x_powered_by": null,
+          "title": null,
+          "bytes": 0,
+          "robots_txt": "",
+          "security_txt": "",
+          "tls": null,
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) Recv failure: Connection reset by peer",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) Recv failure: Connection reset by peer",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) Recv failure: Connection reset by peer",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (56) Recv failure: Connection reset by peer"
+          }
+        }
+      ],
+      "risk_flags": [
+        "SMB exposed (445/139)",
+        "AFP/Netatalk exposed (548)",
+        "NAS/admin web surface (5000/5001)",
+        "RPC/NFS surface (111/2049)"
+      ],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "dc:a6:32:b8:26:43",
+      "type": "server",
+      "name": "",
+      "hostname": "homeassistant.lan",
+      "mdns": [
+        "a0d7b954-aircast.local",
+        "e0c9edfa36a7415eb61e4e12738feea0-hap.local",
+        "e0c9edfa36a7415eb61e4e12738feea0.local",
+        "homeassistant.local"
+      ],
+      "mdns_services": [
+        "AirTunes Remote Audio",
+        "Workstation",
+        "_hap._tcp",
+        "_home-assistant._tcp"
+      ],
+      "ssdp": [],
+      "ip": "192.168.235.3",
+      "mac": "dc:a6:32:b8:26:43",
+      "vendor": "Raspberry Pi Trading Ltd",
+      "open_ports": [
+        {
+          "port": "22/tcp",
+          "service": "ssh",
+          "version": "OpenSSH 10.2 (protocol 2.0)",
+          "raw": "22/tcp  open  ssh     OpenSSH 10.2 (protocol 2.0)"
+        },
+        {
+          "port": "111/tcp",
+          "service": "rpcbind",
+          "version": "",
+          "raw": "111/tcp open  rpcbind"
+        }
+      ],
+      "web": [],
+      "risk_flags": [
+        "SSH exposed (22)",
+        "RPC/NFS surface (111/2049)"
+      ],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "d8:d5:b9:00:bd:2a",
+      "type": "unknown",
+      "name": "",
+      "hostname": "eagle-00bd2a.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.4",
+      "mac": "d8:d5:b9:00:bd:2a",
+      "vendor": "Rainforest Automation, Inc.",
+      "open_ports": [
+        {
+          "port": "22/tcp",
+          "service": "ssh",
+          "version": "OpenSSH 8.0 (protocol 2.0)",
+          "raw": "22/tcp  open  ssh      OpenSSH 8.0 (protocol 2.0)"
+        },
+        {
+          "port": "80/tcp",
+          "service": "http",
+          "version": "lighttpd 1.4.55",
+          "raw": "80/tcp  open  http     lighttpd 1.4.55"
+        },
+        {
+          "port": "443/tcp",
+          "service": "ssl/http",
+          "version": "lighttpd 1.4.55",
+          "raw": "443/tcp open  ssl/http lighttpd 1.4.55"
+        }
+      ],
+      "web": [
+        {
+          "ip": "192.168.235.4",
+          "port": 80,
+          "url": "http://192.168.235.4:80/",
+          "status": 401,
+          "server": "lighttpd/1.4.55",
+          "x_powered_by": null,
+          "title": "401 Unauthorized",
+          "bytes": 347,
+          "robots_txt": "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n         \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n <head>\n  <title>401 Unauthorized</title>\n </head>\n <body>\n  <h1>401 Unauthorized</h1>\n </body>\n</html>\n",
+          "security_txt": "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n         \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n <head>\n  <title>401 Unauthorized</title>\n </head>\n <body>\n  <h1>401 Unauthorized</h1>\n </body>\n</html>\n",
+          "tls": null,
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0   347    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   347  100   347    0     0  34962      0 --:--:-- --:--:-- --:--:-- 38555",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   347  100   347    0     0  30902      0 --:--:-- --:--:-- --:--:-- 31545",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   347  100   347    0     0  26434      0 --:--:-- --:--:-- --:--:-- 26692"
+          }
+        },
+        {
+          "ip": "192.168.235.4",
+          "port": 443,
+          "url": "https://192.168.235.4:443/",
+          "status": 401,
+          "server": "lighttpd/1.4.55",
+          "x_powered_by": null,
+          "title": "401 Unauthorized",
+          "bytes": 347,
+          "robots_txt": "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n         \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n <head>\n  <title>401 Unauthorized</title>\n </head>\n <body>\n  <h1>401 Unauthorized</h1>\n </body>\n</html>\n",
+          "security_txt": "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n         \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n <head>\n  <title>401 Unauthorized</title>\n </head>\n <body>\n  <h1>401 Unauthorized</h1>\n </body>\n</html>\n",
+          "tls": {
+            "rc": 0,
+            "summary": "subject=C = CA, ST = BC, L = Vancouver, O = RainforestAutomation, CN = eagle-00bd2a\nissuer=C = CA, ST = BC, L = Vancouver, O = RainforestAutomation, OU = changeme, CN = changeme, name = changeme, emailAddress = support@rainforestautomation.com\nnotBefore=Nov  1 21:54:28 2017 GMT\nnotAfter=Oct 30 21:54:28 2027 GMT",
+            "err": ""
+          },
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0   347    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   347  100   347    0     0   1600      0 --:--:-- --:--:-- --:--:--  1606",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   347  100   347    0     0   1606      0 --:--:-- --:--:-- --:--:--  1606",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   347  100   347    0     0   1550      0 --:--:-- --:--:-- --:--:--  1556"
+          }
+        }
+      ],
+      "risk_flags": [
+        "SSH exposed (22)"
+      ],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "84:47:09:56:2f:0b",
+      "type": "client",
+      "name": "",
+      "hostname": "",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.5",
+      "mac": "84:47:09:56:2f:0b",
+      "vendor": "Shenzhen IP3 Century Intelligent Technology CO.,Ltd",
+      "open_ports": [
+        {
+          "port": "22/tcp",
+          "service": "ssh",
+          "version": "OpenSSH 10.0p2 Debian 7 (protocol 2.0)",
+          "raw": "22/tcp   open  ssh     OpenSSH 10.0p2 Debian 7 (protocol 2.0)"
+        },
+        {
+          "port": "111/tcp",
+          "service": "rpcbind",
+          "version": "",
+          "raw": "111/tcp  open  rpcbind"
+        },
+        {
+          "port": "3128/tcp",
+          "service": "http",
+          "version": "Proxmox Virtual Environment REST API 3.0",
+          "raw": "3128/tcp open  http    Proxmox Virtual Environment REST API 3.0"
+        }
+      ],
+      "web": [],
+      "risk_flags": [
+        "SSH exposed (22)",
+        "RPC/NFS surface (111/2049)"
+      ],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "3c:dc:75:02:a2:c0",
+      "type": "unknown",
+      "name": "",
+      "hostname": "espressif.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.51",
+      "mac": "3c:dc:75:02:a2:c0",
+      "vendor": "(Unknown)",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "94:3a:91:94:e9:50",
+      "type": "unknown",
+      "name": "",
+      "hostname": "",
+      "mdns": [
+        "linux.local"
+      ],
+      "mdns_services": [
+        "_meshcop._udp"
+      ],
+      "ssdp": [],
+      "ip": "192.168.235.52",
+      "mac": "94:3a:91:94:e9:50",
+      "vendor": "Amazon Technologies Inc.",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "80:48:2c:58:47:cd",
+      "type": "unknown",
+      "name": "",
+      "hostname": "hl_bc-80482c5847cd.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.54",
+      "mac": "80:48:2c:58:47:cd",
+      "vendor": "(Unknown)",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "9c:76:13:e3:77:c1",
+      "type": "iot",
+      "name": "",
+      "hostname": "ring.llc.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.55",
+      "mac": "9c:76:13:e3:77:c1",
+      "vendor": "Ring LLC",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "bc:24:11:39:1c:41",
+      "type": "unknown",
+      "name": "",
+      "hostname": "ubsrvr8gb4cr.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.60",
+      "mac": "bc:24:11:39:1c:41",
+      "vendor": "(Unknown)",
+      "open_ports": [
+        {
+          "port": "22/tcp",
+          "service": "ssh",
+          "version": "OpenSSH 9.6p1 Ubuntu 3ubuntu13.14 (Ubuntu Linux; protocol 2.0)",
+          "raw": "22/tcp open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.14 (Ubuntu Linux; protocol 2.0)"
+        }
+      ],
+      "web": [],
+      "risk_flags": [
+        "SSH exposed (22)"
+      ],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "52:5c:f5:7c:e7:4c",
+      "type": "unknown",
+      "name": "",
+      "hostname": "iphone.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.66",
+      "mac": "52:5c:f5:7c:e7:4c",
+      "vendor": "(Unknown: locally administered)",
+      "open_ports": [
+        {
+          "port": "49152/tcp",
+          "service": "tcpwrapped",
+          "version": "",
+          "raw": "49152/tcp open  tcpwrapped"
+        }
+      ],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "50:c7:bf:03:b8:0a",
+      "type": "unknown",
+      "name": "",
+      "hostname": "hs100.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.67",
+      "mac": "50:c7:bf:03:b8:0a",
+      "vendor": "TP-LINK TECHNOLOGIES CO.,LTD.",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "6c:29:90:f3:54:76",
+      "type": "iot",
+      "name": "",
+      "hostname": "wiz_f35476.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.69",
+      "mac": "6c:29:90:f3:54:76",
+      "vendor": "WiZ Connected Lighting Company Limited",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "ca:0c:c3:26:c7:33",
+      "type": "unknown",
+      "name": "",
+      "hostname": "",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.71",
+      "mac": "ca:0c:c3:26:c7:33",
+      "vendor": "(Unknown: locally administered)",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "40:ae:30:6c:47:50",
+      "type": "unknown",
+      "name": "",
+      "hostname": "hs103.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.73",
+      "mac": "40:ae:30:6c:47:50",
+      "vendor": "(Unknown)",
+      "open_ports": [
+        {
+          "port": "9999/tcp",
+          "service": "abyss?",
+          "version": "",
+          "raw": "9999/tcp  open     abyss?"
+        }
+      ],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "66:c9:a8:8b:c4:37",
+      "type": "unknown",
+      "name": "",
+      "hostname": "watch.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.75",
+      "mac": "66:c9:a8:8b:c4:37",
+      "vendor": "(Unknown: locally administered)",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "08:02:8e:a2:99:30",
+      "type": "ap",
+      "name": "Netgear Orbi WAP (84)",
+      "hostname": "rbr40.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.84",
+      "mac": "08:02:8e:a2:99:30",
+      "vendor": "NETGEAR",
+      "open_ports": [
+        {
+          "port": "53/tcp",
+          "service": "domain",
+          "version": "dnsmasq 2.80",
+          "raw": "53/tcp  open  domain   dnsmasq 2.80"
+        },
+        {
+          "port": "80/tcp",
+          "service": "http",
+          "version": "uhttpd 1.0.0 (Netgear Orbi-mini WAP http config)",
+          "raw": "80/tcp  open  http     uhttpd 1.0.0 (Netgear Orbi-mini WAP http config)"
+        },
+        {
+          "port": "443/tcp",
+          "service": "ssl/http",
+          "version": "uhttpd 1.0.0 (Netgear Orbi-mini WAP http config)",
+          "raw": "443/tcp open  ssl/http uhttpd 1.0.0 (Netgear Orbi-mini WAP http config)"
+        }
+      ],
+      "web": [
+        {
+          "ip": "192.168.235.84",
+          "port": 80,
+          "url": "http://192.168.235.84:80/",
+          "status": 501,
+          "server": "uhttpd/1.0.0",
+          "x_powered_by": null,
+          "title": "401 Authorization",
+          "bytes": 325,
+          "robots_txt": "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n         \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n <head>\n  <title>404 Not Found</title>\n </head>\n <body>\n  <h1>404 Not Found</h1>\n </body>\n</html>\n",
+          "security_txt": "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n         \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n <head>\n  <title>404 Not Found</title>\n </head>\n <body>\n  <h1>404 Not Found</h1>\n </body>\n</html>\n",
+          "tls": null,
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0   346    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   325  100   325    0     0   1455      0 --:--:-- --:--:-- --:--:--  1450\n100   325  100   325    0     0   1454      0 --:--:-- --:--:-- --:--:--  1450",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   341  100   341    0     0  52084      0 --:--:-- --:--:-- --:--:-- 56833",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   341  100   341    0     0  39605      0 --:--:-- --:--:-- --:--:-- 42625"
+          }
+        },
+        {
+          "ip": "192.168.235.84",
+          "port": 443,
+          "url": "https://192.168.235.84:443/",
+          "status": 501,
+          "server": "uhttpd/1.0.0",
+          "x_powered_by": null,
+          "title": "401 Authorization",
+          "bytes": 325,
+          "robots_txt": "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n         \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n <head>\n  <title>404 Not Found</title>\n </head>\n <body>\n  <h1>404 Not Found</h1>\n </body>\n</html>\n",
+          "security_txt": "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n         \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n <head>\n  <title>404 Not Found</title>\n </head>\n <body>\n  <h1>404 Not Found</h1>\n </body>\n</html>\n",
+          "tls": {
+            "rc": 0,
+            "summary": "subject=C = US, ST = California, L = San Jose, O = Netgear, CN = www.routerlogin.net\nissuer=C = US, ST = California, L = San Jose, O = Netgear, CN = www.routerlogin.net\nnotBefore=Dec 19 11:06:36 2025 GMT\nnotAfter=Dec 17 11:06:36 2035 GMT",
+            "err": ""
+          },
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0   346    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   325  100   325    0     0    881      0 --:--:-- --:--:-- --:--:--   883",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   341  100   341    0     0   2340      0 --:--:-- --:--:-- --:--:--  2351",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   341  100   341    0     0   2658      0 --:--:-- --:--:-- --:--:--  2664"
+          }
+        }
+      ],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "78:e3:6d:f5:59:b4",
+      "type": "unknown",
+      "name": "",
+      "hostname": "espressif.lan",
+      "mdns": [
+        "MyHost.local"
+      ],
+      "mdns_services": [
+        "_hap._tcp"
+      ],
+      "ssdp": [],
+      "ip": "192.168.235.88",
+      "mac": "78:e3:6d:f5:59:b4",
+      "vendor": "Espressif Inc.",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "b8:80:4f:4f:6c:80",
+      "type": "unknown",
+      "name": "",
+      "hostname": "ring-4f6c80.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.89",
+      "mac": "b8:80:4f:4f:6c:80",
+      "vendor": "Texas Instruments",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "10:2c:6b:ca:e0:53",
+      "type": "unknown",
+      "name": "",
+      "hostname": "pvs6-zt222585000549b3118.lan",
+      "mdns": [
+        "pvs.local"
+      ],
+      "mdns_services": [
+        "_pvs6._tcp"
+      ],
+      "ssdp": [],
+      "ip": "192.168.235.90",
+      "mac": "10:2c:6b:ca:e0:53",
+      "vendor": "AMPAK Technology, Inc.",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "3c:dc:75:15:c4:78",
+      "type": "unknown",
+      "name": "",
+      "hostname": "",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.92",
+      "mac": "3c:dc:75:15:c4:78",
+      "vendor": "(Unknown)",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "88:53:2e:02:9a:bd",
+      "type": "client",
+      "name": "",
+      "hostname": "mint-dell-system-xps-l502x.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.93",
+      "mac": "88:53:2e:02:9a:bd",
+      "vendor": "Intel Corporate",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "dc:e5:5b:88:8c:6c",
+      "type": "unknown",
+      "name": "",
+      "hostname": "",
+      "mdns": [
+        "fuchsia-dce5-5bb1-ba7c.local"
+      ],
+      "mdns_services": [
+        "_googcrossdevice._tcp",
+        "_googlecast._tcp",
+        "_googlezone._tcp",
+        "_meshcop._udp",
+        "_trel._udp"
+      ],
+      "ssdp": [],
+      "ip": "192.168.235.104",
+      "mac": "dc:e5:5b:88:8c:6c",
+      "vendor": "Google, Inc.",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "b0:4a:39:47:69:1b",
+      "type": "unknown",
+      "name": "",
+      "hostname": "roborock-vacuum-a27.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.124",
+      "mac": "b0:4a:39:47:69:1b",
+      "vendor": "Beijing Roborock Technology Co., Ltd.",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "5a:13:85:5f:44:0c",
+      "type": "unknown",
+      "name": "",
+      "hostname": "",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.127",
+      "mac": "5a:13:85:5f:44:0c",
+      "vendor": "(Unknown: locally administered)",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "54:e0:19:8f:ea:a8",
+      "type": "iot",
+      "name": "",
+      "hostname": "ring.llc.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.129",
+      "mac": "54:e0:19:8f:ea:a8",
+      "vendor": "Ring LLC",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "64:cb:e9:19:67:94",
+      "type": "unknown",
+      "name": "",
+      "hostname": "",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.132",
+      "mac": "64:cb:e9:19:67:94",
+      "vendor": "LG Innotek",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "ac:bc:b5:ec:81:3b",
+      "type": "client",
+      "name": "",
+      "hostname": "living.room.lan",
+      "mdns": [
+        "Living-Room.local"
+      ],
+      "mdns_services": [
+        "AirPlay Remote Video",
+        "AirTunes Remote Audio",
+        "_companion-link._tcp",
+        "_hap._tcp",
+        "_meshcop._udp",
+        "_sleep-proxy._udp",
+        "_srpl-tls._tcp",
+        "_trel._udp"
+      ],
+      "ssdp": [],
+      "ip": "192.168.235.133",
+      "mac": "ac:bc:b5:ec:81:3b",
+      "vendor": "Apple, Inc.",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "50:ba:02:79:32:22",
+      "type": "tv",
+      "name": "",
+      "hostname": "canvas.tv.lan",
+      "mdns": [
+        "Android.local",
+        "e1ff639d-fedf-72fc-1445-9ee495ebf427.local",
+        "localhost.local"
+      ],
+      "mdns_services": [
+        "AirPlay Remote Video",
+        "_androidtvremote2._tcp",
+        "_googlecast._tcp",
+        "_hap._tcp"
+      ],
+      "ssdp": [
+        {
+          "st": "upnp:rootdevice",
+          "server": "Linux/5.4.286, UPnP/1.0, Portable SDK for UPnP devices",
+          "location": "http://192.168.235.148:9080",
+          "usn": "uuid:NFANDROID2-PRV-MTK96184KGOOGLETV-HVCL=SMARTTV=4K-27451-A01B1CF808DACBA35C997791C3C999CEB8D84F13065D26A7E436DAA79D40470E::upnp:rootdevice"
+        },
+        {
+          "st": "upnp:rootdevice",
+          "server": "Linux/5.4.286, UPnP/1.0, Chromecast/1.6.18",
+          "location": "http://192.168.235.148:8008/ssdp/device-desc.xml",
+          "usn": "uuid:e1ff639d-fedf-72fc-1445-9ee495ebf427::upnp:rootdevice"
+        },
+        {
+          "st": "uuid:e1ff639d-fedf-72fc-1445-9ee495ebf427",
+          "server": "Linux/5.4.286, UPnP/1.0, Chromecast/1.6.18",
+          "location": "http://192.168.235.148:8008/ssdp/device-desc.xml",
+          "usn": "uuid:e1ff639d-fedf-72fc-1445-9ee495ebf427"
+        },
+        {
+          "st": "uuid:NFANDROID2-PRV-MTK96184KGOOGLETV-HVCL=SMARTTV=4K-27451-A01B1CF808DACBA35C997791C3C999CEB8D84F13065D26A7E436DAA79D40470E",
+          "server": "Linux/5.4.286, UPnP/1.0, Portable SDK for UPnP devices",
+          "location": "http://192.168.235.148:9080",
+          "usn": "uuid:NFANDROID2-PRV-MTK96184KGOOGLETV-HVCL=SMARTTV=4K-27451-A01B1CF808DACBA35C997791C3C999CEB8D84F13065D26A7E436DAA79D40470E"
+        },
+        {
+          "st": "urn:dial-multiscreen-org:device:dial:1",
+          "server": "Linux/5.4.286, UPnP/1.0, Chromecast/1.6.18",
+          "location": "http://192.168.235.148:8008/ssdp/device-desc.xml",
+          "usn": "uuid:e1ff639d-fedf-72fc-1445-9ee495ebf427::urn:dial-multiscreen-org:device:dial:1"
+        },
+        {
+          "st": "urn:schemas-upnp-org:device:mdxdevice:1",
+          "server": "Linux/5.4.286, UPnP/1.0, Portable SDK for UPnP devices",
+          "location": "http://192.168.235.148:9080",
+          "usn": "uuid:NFANDROID2-PRV-MTK96184KGOOGLETV-HVCL=SMARTTV=4K-27451-A01B1CF808DACBA35C997791C3C999CEB8D84F13065D26A7E436DAA79D40470E::urn:schemas-upnp-org:device:mdxdevice:1"
+        },
+        {
+          "st": "urn:dial-multiscreen-org:service:dial:1",
+          "server": "Linux/5.4.286, UPnP/1.0, Chromecast/1.6.18",
+          "location": "http://192.168.235.148:8008/ssdp/device-desc.xml",
+          "usn": "uuid:e1ff639d-fedf-72fc-1445-9ee495ebf427::urn:dial-multiscreen-org:service:dial:1"
+        },
+        {
+          "st": "urn:mdx-netflix-com:service:target:3",
+          "server": "Linux/5.4.286, UPnP/1.0, Portable SDK for UPnP devices",
+          "location": "http://192.168.235.148:9080",
+          "usn": "uuid:NFANDROID2-PRV-MTK96184KGOOGLETV-HVCL=SMARTTV=4K-27451-A01B1CF808DACBA35C997791C3C999CEB8D84F13065D26A7E436DAA79D40470E::urn:mdx-netflix-com:service:target:3"
+        }
+      ],
+      "ip": "192.168.235.148",
+      "mac": "50:ba:02:79:32:22",
+      "vendor": "(Unknown)",
+      "open_ports": [
+        {
+          "port": "8008/tcp",
+          "service": "http?",
+          "version": "",
+          "raw": "8008/tcp open  http?"
+        },
+        {
+          "port": "8009/tcp",
+          "service": "ssl/ajp13?",
+          "version": "",
+          "raw": "8009/tcp open  ssl/ajp13?"
+        },
+        {
+          "port": "8443/tcp",
+          "service": "ssl/https-alt?",
+          "version": "",
+          "raw": "8443/tcp open  ssl/https-alt?"
+        }
+      ],
+      "web": [
+        {
+          "ip": "192.168.235.148",
+          "port": 8008,
+          "url": "http://192.168.235.148:8008/",
+          "status": 404,
+          "server": null,
+          "x_powered_by": null,
+          "title": null,
+          "bytes": 0,
+          "robots_txt": "",
+          "security_txt": "",
+          "tls": null,
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0"
+          }
+        },
+        {
+          "ip": "192.168.235.148",
+          "port": 8009,
+          "url": "http://192.168.235.148:8009/",
+          "status": null,
+          "server": null,
+          "x_powered_by": null,
+          "title": null,
+          "bytes": 0,
+          "robots_txt": "",
+          "security_txt": "",
+          "tls": null,
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (52) Empty reply from server",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (52) Empty reply from server",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (52) Empty reply from server",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (52) Empty reply from server"
+          }
+        },
+        {
+          "ip": "192.168.235.148",
+          "port": 8443,
+          "url": "https://192.168.235.148:8443/",
+          "status": 404,
+          "server": null,
+          "x_powered_by": null,
+          "title": null,
+          "bytes": 0,
+          "robots_txt": "",
+          "security_txt": "",
+          "tls": {
+            "rc": 0,
+            "summary": "subject=C = US, ST = Washington, L = Kirkland, O = Google Inc, OU = Widevine, CN = 6617979870072948419\nissuer=C = US, ST = Washington, L = Kirkland, O = Google Inc, OU = Widevine, CN = Hisense TV hengshan Mediatek MT9689 Cast ICA\nnotBefore=Dec 21 22:59:08 2024 GMT\nnotAfter=Dec 21 22:59:08 2044 GMT",
+            "err": ""
+          },
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0"
+          }
+        }
+      ],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "90:39:5f:16:35:55",
+      "type": "unknown",
+      "name": "",
+      "hostname": "echo.show.kitchen.lan",
+      "mdns": [
+        "none.local"
+      ],
+      "mdns_services": [
+        "_meshcop._udp"
+      ],
+      "ssdp": [],
+      "ip": "192.168.235.151",
+      "mac": "90:39:5f:16:35:55",
+      "vendor": "(Unknown)",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "2c:aa:8e:a7:b2:e8",
+      "type": "iot",
+      "name": "",
+      "hostname": "wyze.labs.inc.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.152",
+      "mac": "2c:aa:8e:a7:b2:e8",
+      "vendor": "Wyze Labs Inc",
+      "open_ports": [
+        {
+          "port": "53/tcp",
+          "service": "domain",
+          "version": "dnsmasq 2.72",
+          "raw": "53/tcp open     domain  dnsmasq 2.72"
+        }
+      ],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "f4:34:f0:3b:32:fc",
+      "type": "client",
+      "name": "",
+      "hostname": "bedroom.lan",
+      "mdns": [
+        "Bedroom.local"
+      ],
+      "mdns_services": [
+        "AirPlay Remote Video",
+        "AirTunes Remote Audio",
+        "_companion-link._tcp",
+        "_hap._tcp",
+        "_meshcop._udp",
+        "_sleep-proxy._udp",
+        "_srpl-tls._tcp",
+        "_trel._udp"
+      ],
+      "ssdp": [],
+      "ip": "192.168.235.165",
+      "mac": "f4:34:f0:3b:32:fc",
+      "vendor": "Apple, Inc.",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "3c:37:86:48:3b:72",
+      "type": "ap",
+      "name": "",
+      "hostname": "rbs40v.lan",
+      "mdns": [
+        "3C\\05837\\05886\\05848\\0583B\\05872-0.local"
+      ],
+      "mdns_services": [
+        "_spotify-connect._tcp"
+      ],
+      "ssdp": [],
+      "ip": "192.168.235.170",
+      "mac": "3c:37:86:48:3b:72",
+      "vendor": "NETGEAR",
+      "open_ports": [
+        {
+          "port": "53/tcp",
+          "service": "tcpwrapped",
+          "version": "",
+          "raw": "53/tcp open  tcpwrapped"
+        },
+        {
+          "port": "80/tcp",
+          "service": "tcpwrapped",
+          "version": "",
+          "raw": "80/tcp open  tcpwrapped"
+        }
+      ],
+      "web": [
+        {
+          "ip": "192.168.235.170",
+          "port": 80,
+          "url": "http://192.168.235.170:80/",
+          "status": 400,
+          "server": null,
+          "x_powered_by": null,
+          "title": "NETGEAR RBS40V",
+          "bytes": 4924,
+          "robots_txt": "<html>\n<head>\n<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>\n<title>401 Unauthorized</title></head>\n<body onload=\"document.aForm.submit()\"><h1>401 Unauthorized</h1>\n<p>Access to this resource is denied, your client has not supplied the correct authentication.</p><form method=\"post\" action=\"unauth.cgi?id=1976106748\" name=\"aForm\"></form></body>\n</html>\n",
+          "security_txt": "<html>\n<head>\n<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>\n<title>401 Unauthorized</title></head>\n<body onload=\"document.aForm.submit()\"><h1>401 Unauthorized</h1>\n<p>Access to this resource is denied, your client has not supplied the correct authentication.</p><form method=\"post\" action=\"unauth.cgi?id=1976106748\" name=\"aForm\"></form></body>\n</html>\n",
+          "tls": null,
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  4924  100  4924    0     0   348k      0 --:--:-- --:--:-- --:--:--  369k",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   381    0   381    0     0  25758      0 --:--:-- --:--:-- --:--:-- 27214",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   381    0   381    0     0  29425      0 --:--:-- --:--:-- --:--:-- 31750"
+          }
+        }
+      ],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "f8:54:f6:59:11:f8",
+      "type": "unknown",
+      "name": "",
+      "hostname": "",
+      "mdns": [
+        "hp-laptop-2.local"
+      ],
+      "mdns_services": [
+        "_teamviewer._tcp"
+      ],
+      "ssdp": [],
+      "ip": "192.168.235.172",
+      "mac": "f8:54:f6:59:11:f8",
+      "vendor": "(Unknown)",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "a4:08:01:7d:e5:bb",
+      "type": "unknown",
+      "name": "",
+      "hostname": "",
+      "mdns": [
+        "none-6.local"
+      ],
+      "mdns_services": [
+        "_meshcop._udp"
+      ],
+      "ssdp": [],
+      "ip": "192.168.235.173",
+      "mac": "a4:08:01:7d:e5:bb",
+      "vendor": "Amazon Technologies Inc.",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "14:c1:4e:93:a3:aa",
+      "type": "tv",
+      "name": "",
+      "hostname": "google.tv.lan",
+      "mdns": [
+        "7b7d6518-8efc-5ec7-3cf6-b345bb3d9084.local"
+      ],
+      "mdns_services": [
+        "_googlecast._tcp",
+        "_googlezone._tcp"
+      ],
+      "ssdp": [
+        {
+          "st": "upnp:rootdevice",
+          "server": "Linux/5.15.170-android14-11-gf4a1f03072af, UPnP/1.0, Chromecast/1.6.18",
+          "location": "http://192.168.235.180:8008/ssdp/device-desc.xml",
+          "usn": "uuid:7b7d6518-8efc-5ec7-3cf6-b345bb3d9084::upnp:rootdevice"
+        },
+        {
+          "st": "uuid:7b7d6518-8efc-5ec7-3cf6-b345bb3d9084",
+          "server": "Linux/5.15.170-android14-11-gf4a1f03072af, UPnP/1.0, Chromecast/1.6.18",
+          "location": "http://192.168.235.180:8008/ssdp/device-desc.xml",
+          "usn": "uuid:7b7d6518-8efc-5ec7-3cf6-b345bb3d9084"
+        },
+        {
+          "st": "urn:dial-multiscreen-org:device:dial:1",
+          "server": "Linux/5.15.170-android14-11-gf4a1f03072af, UPnP/1.0, Chromecast/1.6.18",
+          "location": "http://192.168.235.180:8008/ssdp/device-desc.xml",
+          "usn": "uuid:7b7d6518-8efc-5ec7-3cf6-b345bb3d9084::urn:dial-multiscreen-org:device:dial:1"
+        },
+        {
+          "st": "urn:dial-multiscreen-org:service:dial:1",
+          "server": "Linux/5.15.170-android14-11-gf4a1f03072af, UPnP/1.0, Chromecast/1.6.18",
+          "location": "http://192.168.235.180:8008/ssdp/device-desc.xml",
+          "usn": "uuid:7b7d6518-8efc-5ec7-3cf6-b345bb3d9084::urn:dial-multiscreen-org:service:dial:1"
+        }
+      ],
+      "ip": "192.168.235.180",
+      "mac": "14:c1:4e:93:a3:aa",
+      "vendor": "Google, Inc.",
+      "open_ports": [
+        {
+          "port": "8008/tcp",
+          "service": "http?",
+          "version": "",
+          "raw": "8008/tcp open  http?"
+        },
+        {
+          "port": "8009/tcp",
+          "service": "ssl/ajp13?",
+          "version": "",
+          "raw": "8009/tcp open  ssl/ajp13?"
+        },
+        {
+          "port": "8443/tcp",
+          "service": "ssl/https-alt?",
+          "version": "",
+          "raw": "8443/tcp open  ssl/https-alt?"
+        }
+      ],
+      "web": [
+        {
+          "ip": "192.168.235.180",
+          "port": 8008,
+          "url": "http://192.168.235.180:8008/",
+          "status": 404,
+          "server": null,
+          "x_powered_by": null,
+          "title": null,
+          "bytes": 0,
+          "robots_txt": "",
+          "security_txt": "",
+          "tls": null,
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0"
+          }
+        },
+        {
+          "ip": "192.168.235.180",
+          "port": 8009,
+          "url": "http://192.168.235.180:8009/",
+          "status": null,
+          "server": null,
+          "x_powered_by": null,
+          "title": null,
+          "bytes": 0,
+          "robots_txt": "",
+          "security_txt": "",
+          "tls": null,
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (52) Empty reply from server",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (52) Empty reply from server",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (52) Empty reply from server",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (52) Empty reply from server"
+          }
+        },
+        {
+          "ip": "192.168.235.180",
+          "port": 8443,
+          "url": "https://192.168.235.180:8443/",
+          "status": 404,
+          "server": null,
+          "x_powered_by": null,
+          "title": null,
+          "bytes": 0,
+          "robots_txt": "",
+          "security_txt": "",
+          "tls": {
+            "rc": 0,
+            "summary": "subject=C = US, ST = California, L = Mountain View, O = Google Inc, OU = Cast, CN = DD0U16W FA8FCA7DE17D\nissuer=C = US, ST = California, L = Mountain View, O = Google Inc, OU = Cast, CN = Chromecast ICA 21 (ATV)\nnotBefore=Mar  5 08:00:00 2019 GMT\nnotAfter=Aug 31 18:56:11 2040 GMT",
+            "err": ""
+          },
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0"
+          }
+        }
+      ],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "68:55:d4:83:6a:1d",
+      "type": "printer",
+      "name": "",
+      "hostname": "epson.et-3950.series.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.181",
+      "mac": "68:55:d4:83:6a:1d",
+      "vendor": "(Unknown)",
+      "open_ports": [
+        {
+          "port": "80/tcp",
+          "service": "tcpwrapped",
+          "version": "",
+          "raw": "80/tcp   open  tcpwrapped"
+        },
+        {
+          "port": "443/tcp",
+          "service": "tcpwrapped",
+          "version": "",
+          "raw": "443/tcp  open  tcpwrapped"
+        },
+        {
+          "port": "515/tcp",
+          "service": "printer",
+          "version": "",
+          "raw": "515/tcp  open  printer"
+        },
+        {
+          "port": "631/tcp",
+          "service": "tcpwrapped",
+          "version": "",
+          "raw": "631/tcp  open  tcpwrapped"
+        },
+        {
+          "port": "9100/tcp",
+          "service": "jetdirect?",
+          "version": "",
+          "raw": "9100/tcp open  jetdirect?"
+        }
+      ],
+      "web": [
+        {
+          "ip": "192.168.235.181",
+          "port": 80,
+          "url": "http://192.168.235.181:80/",
+          "status": 404,
+          "server": "EPSON_Linux UPnP/1.0 Epson UPnP SDK/1.0",
+          "x_powered_by": null,
+          "title": null,
+          "bytes": 909,
+          "robots_txt": "",
+          "security_txt": "",
+          "tls": null,
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n\n100   933  100   933    0     0   7095      0 --:--:-- --:--:-- --:--:--  7095",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0"
+          }
+        },
+        {
+          "ip": "192.168.235.181",
+          "port": 443,
+          "url": "https://192.168.235.181:443/",
+          "status": 404,
+          "server": "EPSON_Linux UPnP/1.0 Epson UPnP SDK/1.0",
+          "x_powered_by": null,
+          "title": null,
+          "bytes": 909,
+          "robots_txt": "",
+          "security_txt": "",
+          "tls": {
+            "rc": 0,
+            "summary": "subject=CN = EPSON836A1D, O = SEIKO EPSON CORP.\nissuer=CN = EPSON836A1D, O = SEIKO EPSON CORP.\nnotBefore=Jan  1 00:00:00 2010 GMT\nnotAfter=Jan  1 00:00:00 2038 GMT",
+            "err": ""
+          },
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   933  100   933    0     0   9155      0 --:--:-- --:--:-- --:--:--  9237",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0"
+          }
+        }
+      ],
+      "risk_flags": [
+        "Printer port exposed (9100/JetDirect)",
+        "IPP printing port exposed (631)"
+      ],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "48:5f:2d:85:07:22",
+      "type": "unknown",
+      "name": "",
+      "hostname": "",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.182",
+      "mac": "48:5f:2d:85:07:22",
+      "vendor": "(Unknown)",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "b0:09:da:45:df:62",
+      "type": "iot",
+      "name": "",
+      "hostname": "ring.solutions.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.189",
+      "mac": "b0:09:da:45:df:62",
+      "vendor": "Ring Solutions",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "66:9f:70:bb:c8:99",
+      "type": "unknown",
+      "name": "",
+      "hostname": "",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.194",
+      "mac": "66:9f:70:bb:c8:99",
+      "vendor": "(Unknown: locally administered)",
+      "open_ports": [],
+      "web": [],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "08:02:8e:a0:63:1f",
+      "type": "ap",
+      "name": "Netgear Orbi WAP (196)",
+      "hostname": "rbs40.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.196",
+      "mac": "08:02:8e:a0:63:1f",
+      "vendor": "NETGEAR",
+      "open_ports": [
+        {
+          "port": "80/tcp",
+          "service": "http",
+          "version": "uhttpd 1.0.0 (Netgear Orbi-mini WAP http config)",
+          "raw": "80/tcp  open  http     uhttpd 1.0.0 (Netgear Orbi-mini WAP http config)"
+        },
+        {
+          "port": "443/tcp",
+          "service": "ssl/http",
+          "version": "uhttpd 1.0.0 (Netgear Orbi-mini WAP http config)",
+          "raw": "443/tcp open  ssl/http uhttpd 1.0.0 (Netgear Orbi-mini WAP http config)"
+        }
+      ],
+      "web": [
+        {
+          "ip": "192.168.235.196",
+          "port": 80,
+          "url": "http://192.168.235.196:80/",
+          "status": 501,
+          "server": "uhttpd/1.0.0",
+          "x_powered_by": null,
+          "title": "401 Authorization",
+          "bytes": 325,
+          "robots_txt": "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n         \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n <head>\n  <title>404 Not Found</title>\n </head>\n <body>\n  <h1>404 Not Found</h1>\n </body>\n</html>\n",
+          "security_txt": "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n         \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n <head>\n  <title>404 Not Found</title>\n </head>\n <body>\n  <h1>404 Not Found</h1>\n </body>\n</html>\n",
+          "tls": null,
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0   346    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0   346    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   325  100   325    0     0   1995      0 --:--:-- --:--:-- --:--:--  2006",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   341  100   341    0     0   133k      0 --:--:-- --:--:-- --:--:--  166k",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   341  100   341    0     0   177k      0 --:--:-- --:--:-- --:--:--  333k"
+          }
+        },
+        {
+          "ip": "192.168.235.196",
+          "port": 443,
+          "url": "https://192.168.235.196:443/",
+          "status": 501,
+          "server": "uhttpd/1.0.0",
+          "x_powered_by": null,
+          "title": "401 Authorization",
+          "bytes": 325,
+          "robots_txt": "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n         \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n <head>\n  <title>404 Not Found</title>\n </head>\n <body>\n  <h1>404 Not Found</h1>\n </body>\n</html>\n",
+          "security_txt": "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n         \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n <head>\n  <title>404 Not Found</title>\n </head>\n <body>\n  <h1>404 Not Found</h1>\n </body>\n</html>\n",
+          "tls": {
+            "rc": 0,
+            "summary": "subject=C = US, ST = California, L = San Jose, O = Netgear, CN = www.routerlogin.net\nissuer=C = US, ST = California, L = San Jose, O = Netgear, CN = www.routerlogin.net\nnotBefore=Mar  3 06:05:15 2022 GMT\nnotAfter=Feb 29 06:05:15 2032 GMT",
+            "err": ""
+          },
+          "errors": {
+            "head": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0   346    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "get": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   325  100   325    0     0    886      0 --:--:-- --:--:-- --:--:--   887",
+            "robots": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   341  100   341    0     0   2319      0 --:--:-- --:--:-- --:--:--  2335",
+            "security": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   341  100   341    0     0   2651      0 --:--:-- --:--:-- --:--:--  2664"
+          }
+        }
+      ],
+      "risk_flags": [],
+      "seen_alive": true,
+      "seen_arp": true
+    },
+    {
+      "id": "84:47:09:56:2f:0b",
+      "type": "client",
+      "name": "",
+      "hostname": "hs103.lan",
+      "mdns": [],
+      "mdns_services": [],
+      "ssdp": [],
+      "ip": "192.168.235.200",
+      "mac": "84:47:09:56:2f:0b",
+      "vendor": "Shenzhen IP3 Century Intelligent Technology CO.,Ltd",
+      "open_ports": [
+        {
+          "port": "22/tcp",
+          "service": "ssh",
+          "version": "OpenSSH 10.0p2 Debian 7 (protocol 2.0)",
+          "raw": "22/tcp   open  ssh     OpenSSH 10.0p2 Debian 7 (protocol 2.0)"
+        },
+        {
+          "port": "111/tcp",
+          "service": "rpcbind",
+          "version": "",
+          "raw": "111/tcp  open  rpcbind"
+        },
+        {
+          "port": "3128/tcp",
+          "service": "http",
+          "version": "Proxmox Virtual Environment REST API 3.0",
+          "raw": "3128/tcp open  http    Proxmox Virtual Environment REST API 3.0"
+        }
+      ],
+      "web": [],
+      "risk_flags": [
+        "SSH exposed (22)",
+        "RPC/NFS surface (111/2049)"
+      ],
+      "seen_alive": true,
+      "seen_arp": true
+    }
+  ],
+  "diff": {
+    "new_ids": [
+      "3c:dc:75:02:a2:c0",
+      "3c:dc:75:15:c4:78",
+      "40:ae:30:6c:47:50",
+      "50:c7:bf:03:b8:0a",
+      "66:c9:a8:8b:c4:37",
+      "78:e3:6d:f5:59:b4",
+      "80:48:2c:58:47:cd",
+      "b0:4a:39:47:69:1b",
+      "b8:80:4f:4f:6c:80"
+    ],
+    "gone_ids": [
+      "96:15:ea:67:3f:54"
+    ]
+  }
+}
