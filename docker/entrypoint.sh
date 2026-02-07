@@ -11,7 +11,11 @@ NW_SCAN_EVERY_MINUTES=${NW_SCAN_EVERY_MINUTES:-60}
 mkdir -p /app/data /app/logs /app/state
 
 # Start HTTP server in background
-python3 -m http.server "${NW_HTTP_PORT}" --bind "${NW_HTTP_BIND}" --directory /app/site >/app/logs/http.log 2>&1 &
+# Bind to the host's LAN IP by default (more predictable with host networking).
+BIND_IP="${NW_HTTP_BIND:-$(ip -br addr show dev "${NW_INTERFACE}" | awk '{print $3}' | cut -d/ -f1 | head -n1)}"
+python3 -m http.server "${NW_HTTP_PORT}" --bind "${BIND_IP}" --directory /app/site >/app/logs/http.log 2>&1 &
+
+echo "[network-watch] http server: http://${BIND_IP}:${NW_HTTP_PORT}/"
 
 # Run one scan immediately, then sleep loop
 while true; do
