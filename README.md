@@ -1,5 +1,7 @@
 # Network Watch
 
+![Sanitized overview graphs](docs/assets/public-overview-top.png)
+
 Inventory-first, LAN-only home network monitor.
 
 - Hourly (or configurable) device inventory
