@@ -17,6 +17,15 @@ Inventory-first, LAN-only home network monitor.
 - Docker + Docker Compose
 - Linux host recommended for best results (ARP + raw sockets)
 
+### Configuration
+
+Edit `.env` (copied from `.env.example`). Common knobs:
+
+- `NW_SUBNET` — LAN CIDR to monitor (e.g. `192.168.235.0/24`)
+- `NW_INTERFACE` — interface connected to that LAN (e.g. `ens18`)
+- `NW_HTTP_PORT` — web UI port
+- `NW_SCAN_EVERY_MINUTES` — scan cadence
+
 ### Run
 
 ```bash
