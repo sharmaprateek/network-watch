@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "ip-vs-mac",
+      "title": "IP vs MAC vs hostname",
+      "level": "beginner",
+      "summary": "Why devices have multiple identities on a LAN.",
+      "body": [
+        "An IP address is usually assigned by DHCP and can change over time.",
+        "A MAC address is a hardware identifier on the local network (more stable for tracking devices).",
+        "A hostname is a human-readable label a device may announce (DHCP, mDNS, or DNS).",
+        "For inventory, MAC is typically the most stable key; IP is metadata." 
+      ],
+      "what_to_do_now": [
+        "Pick one device and give it a friendly name.",
+        "Notice if any device’s IP changes across hours."
+      ],
+      "tags": ["ip", "mac", "hostname", "dhcp"]
+    },
+    {
+      "id": "dhcp-churn",
+      "title": "DHCP & IP churn",
+      "level": "beginner",
+      "summary": "Why the same device can show different IPs.",
+      "body": [
+        "Most home networks use DHCP to lease IPs to devices.",
+        "Leases expire, devices disconnect/reconnect, or the router reassigns addresses.",
+        "That’s why inventory tools track devices by MAC and show IP history separately."
+      ],
+      "what_to_do_now": [
+        "Open a device and look at its IP history lane.",
+        "If a device is critical (NAS/AP), consider reserving its IP in your router." 
+      ],
+      "tags": ["dhcp", "ip", "stability"]
+    },
+    {
+      "id": "ports-and-services",
+      "title": "Ports & services",
+      "level": "beginner",
+      "summary": "What it means when a port is open on your LAN.",
+      "body": [
+        "A port is like a numbered ‘door’ a service listens on.",
+        "An ‘open’ port means the device is accepting connections on that port from the LAN.",
+        "Common examples: 80/443 (web), 22 (SSH), 445 (SMB file sharing), 631/9100 (printing).",
+        "On a home LAN, open ports are often normal; the goal is understanding, not panic." 
+      ],
+      "what_to_do_now": [
+        "Click a device and review its Exposure section.",
+        "If you don’t recognize a service, search within the app for that port number." 
+      ],
+      "tags": ["ports", "services", "exposure"]
+    },
+    {
+      "id": "mdns-basics",
+      "title": "mDNS (Bonjour) basics",
+      "level": "beginner",
+      "summary": "How devices advertise names and capabilities on a LAN.",
+      "body": [
+        "mDNS lets devices announce names like *.local without a central DNS server.",
+        "Services are advertised as types like _airplay._tcp or _googlecast._tcp.",
+        "Service types indicate capability categories (streaming, printing, smart home)." 
+      ],
+      "what_to_do_now": [
+        "Look at a device’s mDNS services and guess its category.",
+        "Use mDNS service types as evidence when classifying unknown devices." 
+      ],
+      "tags": ["mdns", "discovery"]
+    },
+    {
+      "id": "ssdp-upnp",
+      "title": "SSDP/UPnP discovery",
+      "level": "beginner",
+      "summary": "Why TVs and media devices often show up via SSDP.",
+      "body": [
+        "SSDP is a LAN discovery protocol often used by media devices (DLNA) and some routers.",
+        "Seeing SSDP responses usually means the device is advertising a description URL on the LAN.",
+        "This is different from ‘port forwarding’—it’s about discovery inside your network." 
+      ],
+      "what_to_do_now": [
+        "Open a device with SSDP and note the server string.",
+        "Use SSDP evidence to classify unknown devices." 
+      ],
+      "tags": ["ssdp", "upnp", "discovery"]
+    }
+  ]
+}

@@ -66,7 +66,9 @@ function spark(values, opts={}){
 let latest = null;
 let history = null;
 let deviceStats = null;
+let lessons = null;
 let selectedId = null;
+let learnOpenId = null;
 
 function route(){
   const h = (location.hash || '#overview').slice(1);
@@ -143,8 +145,8 @@ function renderOverview(){
         <div class="kpis">
           <div class="kpi"><div class="label">Devices now</div><div class="value">${total}</div><div class="muted small">filtered: ${devs.length}</div></div>
           <div class="kpi"><div class="label">Unnamed (no alias)</div><div class="value">${unnamed}</div></div>
-          <div class="kpi"><div class="label">Unknown type</div><div class="value">${unknownType}</div></div>
-          <div class="kpi"><div class="label">Weak identity</div><div class="value">${weakIdentity}</div></div>
+          <div class="kpi"><div class="label">Unknown type <button class="drawer__btn" data-learn="ports-and-services" style="padding:2px 6px; margin-left:6px">?</button></div><div class="value">${unknownType}</div></div>
+          <div class="kpi"><div class="label">Weak identity <button class="drawer__btn" data-learn="mdns-basics" style="padding:2px 6px; margin-left:6px">?</button></div><div class="value">${weakIdentity}</div></div>
         </div>
         <div style="height:10px"></div>
         <div class="flex">
@@ -240,7 +242,17 @@ function renderOverview(){
       sessionStorage.setItem('focusDevice', a.dataset.focus);
     });
   });
+
+  // contextual learn buttons
+  $$('#content [data-learn]').forEach(b => {
+    b.addEventListener('click', (e)=>{
+      e.preventDefault();
+      e.stopPropagation();
+      openLearn(b.getAttribute('data-learn'));
+    });
+  });
 }
+
 
 function renderDevices(){
   const devs = filteredDevices().slice();
@@ -541,8 +553,73 @@ function render(){
   if(r === 'devices') return renderDevices();
   if(r === 'timeline') return renderTimeline();
   if(r === 'insights') return renderInsights();
+  if(r === 'learn') return renderLearn();
   if(r === 'settings') return renderSettings();
   return renderOverview();
+}
+
+function findLesson(id){
+  const list = (lessons && lessons.lessons) ? lessons.lessons : [];
+  return list.find(x=>x.id===id);
+}
+
+function closeLearn(){
+  learnOpenId = null;
+  $('#learnDrawer')?.classList.remove('is-open');
+}
+
+function openLearn(id){
+  const lesson = findLesson(id);
+  if(!lesson) return;
+  learnOpenId = id;
+  $('#learnTitle').textContent = lesson.title || 'Learn';
+  $('#learnSub').textContent = lesson.summary || '';
+  const body = [
+    ...(lesson.body||[]).map(x=>`<li>${esc(x)}</li>`),
+  ].join('');
+
+  const todo = [
+    ...(lesson.what_to_do_now||[]).map(x=>`<li>${esc(x)}</li>`),
+  ].join('');
+
+  $('#learnBody').innerHTML = `
+    <div class="section">
+      <div class="section__title">Explainer</div>
+      <ul class="small">${body || '<li class="muted">No content yet.</li>'}</ul>
+    </div>
+    <div class="section">
+      <div class="section__title">Try this now</div>
+      <ul class="small">${todo || '<li class="muted">No suggested actions yet.</li>'}</ul>
+    </div>
+  `;
+
+  $('#learnDrawer')?.classList.add('is-open');
+}
+
+function renderLearn(){
+  const list = (lessons && lessons.lessons) ? lessons.lessons : [];
+  const cards = list.map(l => `
+    <div class="card" style="box-shadow:none; background:rgba(0,0,0,.10)">
+      <div class="card__hd"><h2>${esc(l.title)}</h2><div class="card__sub">${esc(l.level||'')}</div></div>
+      <div class="card__bd">
+        <div class="muted">${esc(l.summary||'')}</div>
+        <div style="height:10px"></div>
+        <button class="drawer__btn" data-lesson="${esc(l.id)}">Open lesson</button>
+      </div>
+    </div>
+  `).join('');
+
+  $('#content').innerHTML = `
+    <div class="card">
+      <div class="card__hd"><h2>Learn</h2><div class="card__sub">Networking basics, grounded in your own LAN inventory.</div></div>
+      <div class="card__bd">
+        <div class="muted small">Tip: click the “?” icons across the app to open contextual lessons.</div>
+      </div>
+    </div>
+    ${cards || '<div class="muted">No lessons loaded.</div>'}
+  `;
+
+  $$('#content [data-lesson]').forEach(b=> b.addEventListener('click', ()=> openLearn(b.getAttribute('data-lesson'))));
 }
 
 function closeDrawer(){
@@ -679,15 +756,17 @@ function openDrawer(id){
 }
 
 async function load(){
-  const [a,b,c] = await Promise.all([
+  const [a,b,c,d] = await Promise.all([
     fetch('/latest.json', {cache:'no-store'}).catch(()=>null),
     fetch('/history.json', {cache:'no-store'}).catch(()=>null),
-    fetch('/device_stats.json', {cache:'no-store'}).catch(()=>null)
+    fetch('/device_stats.json', {cache:'no-store'}).catch(()=>null),
+    fetch('/app/learn/lessons.json', {cache:'no-store'}).catch(()=>null),
   ]);
 
   if(a){ latest = await a.json(); }
   if(b){ history = await b.json(); }
   if(c && c.ok){ deviceStats = await c.json(); }
+  if(d && d.ok){ lessons = await d.json(); }
 
   $('#lastUpdated').innerHTML = latest ? `Updated <b>${esc(latest.timestamp_human||'')}</b><div class="muted small">Subnet: ${esc(latest.subnet||'')}</div>` : 'Failed to load latest';
 
@@ -739,6 +818,8 @@ $('#filterRisk').addEventListener('change', ()=>{
 $('#drawerClose').addEventListener('click', closeDrawer);
 $('#backdrop').addEventListener('click', closeDrawer);
 
+$('#learnClose').addEventListener('click', closeLearn);
+
 $('#navToggle').addEventListener('click', ()=>{
   const open = $('#sidebar')?.classList.contains('is-open');
   if(open) closeNav(); else openNav();
@@ -746,7 +827,7 @@ $('#navToggle').addEventListener('click', ()=>{
 $('#navBackdrop').addEventListener('click', closeNav);
 
 window.addEventListener('keydown', (e)=>{
-  if(e.key==='Escape') { closeNav(); closeDrawer(); }
+  if(e.key==='Escape') { closeNav(); closeDrawer(); closeLearn(); }
 });
 
 load();

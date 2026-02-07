@@ -20,6 +20,7 @@
         <button class="nav__item" data-route="devices">Devices</button>
         <button class="nav__item" data-route="timeline">Timeline</button>
         <button class="nav__item" data-route="insights">Insights</button>
+        <button class="nav__item" data-route="learn">Learn</button>
         <button class="nav__item" data-route="settings">Settings</button>
       </nav>
 
@@ -53,6 +54,18 @@
   </div>
 
   <div class="backdrop" id="backdrop"></div>
+
+  <aside class="learnDrawer" id="learnDrawer" aria-label="Learn">
+    <div class="drawer__hd">
+      <div class="drawer__title" id="learnTitle">Learn</div>
+      <div class="drawer__sub" id="learnSub">—</div>
+      <div class="drawer__actions">
+        <button class="drawer__btn" id="learnClose">Close</button>
+      </div>
+    </div>
+    <div class="drawer__bd" id="learnBody"></div>
+  </aside>
+
   <aside class="drawer" id="drawer" aria-label="Device details">
     <div class="drawer__hd">
       <div class="drawer__title" id="drawerTitle">Device</div>
