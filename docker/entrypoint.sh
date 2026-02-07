@@ -12,7 +12,13 @@ mkdir -p /app/data /app/logs /app/state
 
 # Start HTTP server in background
 # Bind to the host's LAN IP by default (more predictable with host networking).
-BIND_IP="${NW_HTTP_BIND:-$(ip -br addr show dev "${NW_INTERFACE}" | awk '{print $3}' | cut -d/ -f1 | head -n1)}"
+# If NW_HTTP_BIND is explicitly set, use it.
+if [[ -n "${NW_HTTP_BIND:-}" ]]; then
+  BIND_IP="${NW_HTTP_BIND}"
+else
+  BIND_IP="$(ip -br addr show dev "${NW_INTERFACE}" | awk '{print $3}' | cut -d/ -f1 | head -n1)"
+fi
+
 python3 -m http.server "${NW_HTTP_PORT}" --bind "${BIND_IP}" --directory /app/site >/app/logs/http.log 2>&1 &
 
 echo "[network-watch] http server: http://${BIND_IP}:${NW_HTTP_PORT}/"

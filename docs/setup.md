@@ -40,3 +40,8 @@ Then run:
 bash scan.sh
 python3 -m http.server 8787 --bind 0.0.0.0 --directory site
 ```
+
+## Binding note
+
+In Docker (host network), leaving `NW_HTTP_BIND` blank will bind the server to the IP of `NW_INTERFACE`.
+Set `NW_HTTP_BIND=0.0.0.0` if you explicitly want to listen on all addresses.
