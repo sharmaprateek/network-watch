@@ -8,7 +8,7 @@ Inventory-first, LAN-only home network monitor.
 - MAC-keyed identity (stable across IP churn)
 - Lightweight exposure scan (top TCP ports + version-light)
 - Safe enrichment (headers/titles, SSDP/UPnP, optional mDNS)
-- Static dashboard + offline SPA (sidebar UI)
+- Offline SPA (sidebar UI)
 
 > This project is designed for **your own LAN**. Do not use it to scan networks you don't own or have permission to monitor.
 
@@ -41,7 +41,6 @@ docker compose up --build
 
 Then open (default):
 
-- Dashboard: http://localhost:${NW_HTTP_PORT:-8787}/
 - App (SPA): http://localhost:${NW_HTTP_PORT:-8787}/app/
 
 Change the port by setting `NW_HTTP_PORT` in `.env`.

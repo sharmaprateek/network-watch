@@ -8,6 +8,7 @@ services:
       - .env
     environment:
       - NW_NO_SERVER=1
+      - NW_APP_ONLY=1
     # NOTE: using host networking; port publishing is ignored.
     # Configure the listening port via NW_HTTP_PORT in .env
     volumes:

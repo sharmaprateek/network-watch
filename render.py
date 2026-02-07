@@ -246,6 +246,10 @@ def main():
     ap.add_argument('--subnet', required=True)
     args = ap.parse_args()
 
+    # Public app packaging option: only render the offline SPA (+ JSON endpoints).
+    # Skip legacy HTML pages (timeline/churn/graph/device/fancy).
+    app_only = os.environ.get('NW_APP_ONLY', '').strip().lower() in ('1','true','yes','on')
+
     root = args.root
     data = os.path.join(root, 'data')
     site = os.path.join(root, 'site')
@@ -516,6 +520,26 @@ def main():
             f"</tr>"
         )
 
+    # If app-only mode: we already wrote the JSON artifacts above, so we can skip
+    # generating legacy HTML pages and just ensure / redirects to /app/.
+    if app_only:
+        index_out = """<!doctype html>
+<html>
+<head>
+  <meta charset=\"utf-8\" />
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+  <meta http-equiv=\"refresh\" content=\"0; url=/app/\" />
+  <title>Network Watch</title>
+</head>
+<body>
+  <p>Redirecting to <a href=\"/app/\">/app/</a>…</p>
+</body>
+</html>
+"""
+        with open(os.path.join(site, 'index.html'), 'w') as f:
+            f.write(index_out)
+        return
+
     # Timeline: last up to 48 snapshots
     N = min(len(history), 48)
     start_idx = max(0, len(history) - N)
@@ -772,8 +796,9 @@ def main():
 </html>
 """
 
-    with open(os.path.join(site, 'graph.html'), 'w') as f:
-        f.write(graph_page)
+    if not app_only:
+        with open(os.path.join(site, 'graph.html'), 'w') as f:
+            f.write(graph_page)
 
     # Copy latest snapshot into site so the static server can serve it
     try:
@@ -784,7 +809,7 @@ def main():
     except Exception:
         pass
 
-    # Build a compact history.json (last up to 48 snapshots) for fancy timeline charts
+    # Build a compact history.json (last up to 48 snapshots) for app charts
     try:
         t = []
         devices_s = []
@@ -814,8 +839,9 @@ def main():
     except Exception:
         pass
 
-    # Device detail page (client-side render from latest.json)
-    device_html = """<!doctype html>
+    if not app_only:
+        # Device detail page (client-side render from latest.json)
+        device_html = """<!doctype html>
 <html>
 <head>
   <meta charset=\"utf-8\" />
@@ -879,10 +905,27 @@ def main():
 </html>
 """
 
-    with open(os.path.join(site, 'device.html'), 'w') as f:
-        f.write(device_html)
+        with open(os.path.join(site, 'device.html'), 'w') as f:
+            f.write(device_html)
 
-    index_out = f"""<!doctype html>
+    if app_only:
+        # Minimal index for app-only deployments
+        index_out = """<!doctype html>
+<html>
+<head>
+  <meta charset=\"utf-8\" />
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+  <meta http-equiv=\"refresh\" content=\"0; url=/app/\" />
+  <title>Network Watch</title>
+  <style>body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:24px}</style>
+</head>
+<body>
+  <p>Redirecting to <a href=\"/app/\">/app/</a>…</p>
+</body>
+</html>
+"""
+    else:
+        index_out = f"""<!doctype html>
 <html>
 <head>
   <meta charset="utf-8" />
