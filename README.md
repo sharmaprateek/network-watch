@@ -20,8 +20,8 @@ Inventory-first, LAN-only home network monitor.
 ### Run
 
 ```bash
-git clone <this-repo>
-cd network-watch
+# local repo (no clone yet)
+cd network-watch-public
 cp .env.example .env
 # edit .env with your subnet / interface
 
@@ -55,4 +55,4 @@ See `docs/`:
 
 ## License
 
-TBD (choose MIT/Apache-2.0/etc)
+MIT — see `LICENSE`.
